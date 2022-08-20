@@ -10,11 +10,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 7px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: blue;
+    width: 0px;
 }
 
 header {
@@ -138,13 +134,13 @@ header {
 }
 
 #m_m_2 {
-    width: 965px;
+    width: calc(100% - 240px - 60px);
     margin-top: 34px;
 }
 
 #menu_notchange {
     height: 414px;
-    width: 94%;
+    width: 100%;
     margin-top: 119px;
 }
 
@@ -182,13 +178,13 @@ header {
 
 #menu-s_flight {
     height: 290px;
-    width: calc(100% - 35px);
+    width: calc(100%);
     margin-top: 20px;
     border-radius: 10px;
     background: white;
     box-shadow: 0px 1px 10px 3px #888888;
     border: 1px solid transparent;
-    padding-left: 35px;
+
 }
 
 #menu-s_flight #menu-s_flight-nav {
@@ -197,6 +193,7 @@ header {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    margin-left: 35px;
 }
 
 #menu-s_flight #menu-s_flight-nav .menu-s_flight-nav-butt {
@@ -214,81 +211,94 @@ header {
 
 #menu-s_flight #menu-s_flight-menu {
     height: 192px;
-    width: calc(100% - 40px);
+    width: calc(100% - 70px);
     margin-top: 20px;
-}
-
-#menu-s_flight #menu-s_flight-menu {
-    height: 192px;
-    width: calc(100% - 40px);
-    margin-top: 20px;
-}
-
-#menu-s_flight #menu-s_flight-menu {
-    height: 192px;
-    width: calc(100% - 40px);
-    margin-top: 20px;
-}
-
-#menu-s_flight #menu-s_flight-menu {
-    height: 192px;
-    width: calc(100% - 40px);
-    margin-top: 20px;
+    margin-left: 35px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap:15px 0px;
+    gap: 15px 0px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 
 #menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt1 {
     height: 88px;
-    width: 285px;
+    width: calc(((100% - 36px) * 0.37) - 2px);
     text-transform: uppercase;
     text-align: center;
     cursor: pointer;
-    border-radius:10px;
-    background-color: rgb(248,248, 250);
+    border-radius: 10px;
+    background-color: rgb(248, 248, 250);
     border: 1px solid rgb(230, 230, 233);
-    
 }
 
 #menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt2 {
     height: 88px;
-    width: 199px;
+    width: calc(((100% - 54px) * 0.29) - 2px);
     text-transform: uppercase;
     text-align: center;
     cursor: pointer;
-    border-radius:10px;
-    background-color: rgb(248,248, 250);
+    border-radius: 10px;
+    background-color: rgb(248, 248, 250);
     border: 1px solid rgb(230, 230, 233);
 }
 
 #menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt3 {
     height: 88px;
-    width: 175px;
+    width: calc(((100% - 36px) * 0.26) - 2px);
     text-transform: uppercase;
     text-align: center;
     cursor: pointer;
-    border-radius:10px;
-    background-color: rgb(248,248, 250);
+    border-radius: 10px;
+    background-color: rgb(248, 248, 250);
     border: 1px solid rgb(230, 230, 233);
 }
 
 #menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt4 {
     height: 88px;
-    width: 140px;
+    width: calc(((100% - 54px) * 0.16) - 2px);
     text-transform: uppercase;
     text-align: center;
     cursor: pointer;
-    border-radius:10px;
-    background-color: rgb(248,248, 250);
+    border-radius: 10px;
+    background-color: rgb(248, 248, 250);
     border: 1px solid rgb(230, 230, 233);
 }
+
 #menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt3#sl {
-    color:white;
+    color: white;
     background-color: rgb(223, 20, 45);
     line-height: 88px;
     font-size: 17px;
+}
+
+#slider_offer_menu {
+    width: 100%;
+    min-height: 1000px;
+    margin-top: 42px;
+}
+
+#slider_offer_menu #slider_offer_menu-slider_flight {
+    width: 100%;
+    height: 239px;
+}
+
+#slider_offer_menu #slider_offer_menu-slider_flight #title {
+    width: 100%;
+    height: 31px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#slider_offer_menu #slider_offer_menu-slider_flight #title p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+#slider_offer_menu #slider_offer_menu-slider_flight #title #title_main {
+    font-size: 31px;
+    font-weight: 800;
+}
+#slider_offer_menu #slider_offer_menu-slider_flight #title #title_sub {
+    color: rgb(109, 105, 105);
+    margin-right: 45px;
 }
