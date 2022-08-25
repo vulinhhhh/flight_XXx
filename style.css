@@ -21,7 +21,6 @@ header {
     height: 425px;
     position: absolute;
     width: 100%;
-
 }
 
 #result {
@@ -34,7 +33,6 @@ header {
     min-height: 100%;
     z-index: 1;
     position: relative;
-    min-height: 100%;
 }
 
 #m_m_1 {
@@ -45,6 +43,7 @@ header {
     position: sticky;
     top: 34px;
     margin-top: 34px;
+    user-select: none;
 }
 
 #m_m_1-logo_menu {
@@ -145,6 +144,7 @@ header {
     height: 414px;
     width: 100%;
     margin-top: 119px;
+    user-select: none;
 }
 
 #menu_notchange #menu-nav {
@@ -222,7 +222,7 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 15px 0px;
-    font-family: Arial, Helvetica, sans-serif;
+
     font-weight: bold;
 }
 
@@ -279,7 +279,6 @@ header {
 
 #slider_offer_menu {
     width: 100%;
-    min-height: 1000px;
     margin-top: 42px;
 }
 
@@ -296,14 +295,11 @@ header {
     align-items: center;
 }
 
-#slider_offer_menu #title p {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 #slider_offer_menu #title #title_main {
     font-size: 31px;
     font-weight: 800;
-    color:#282E44;
+    color: #282E44;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #slider_offer_menu #title #title_sub {
@@ -341,11 +337,13 @@ header {
     border-radius: 10px;
     overflow: hidden;
 }
-#slider_offer_menu #slider_offer_menu-slider_flight #slider .slider_item #slider_item-img img{
-  height: 100%;
-  width: 125px;
-  object-fit: cover;
+
+#slider_offer_menu #slider_offer_menu-slider_flight #slider .slider_item #slider_item-img img {
+    height: 100%;
+    width: 125px;
+    object-fit: cover;
 }
+
 #slider_offer_menu #slider_offer_menu-slider_flight #slider .slider_item #slider_item-info-c_p {
     margin-top: 10px;
     margin-left: 15px;
@@ -385,16 +383,97 @@ header {
     background-color: rgb(236, 192, 196);
     border: none;
     cursor: pointer;
-    transition: color 0.5s , background-color 0.5s;
+    transition: color 0.5s, background-color 0.5s;
 }
+
 #slider_offer_menu #slider_offer_menu-slider_flight #slider .slider_item #slider_item-coupon_butt #slider_item-butt:hover {
     color: white;
     background-color: red;
 }
-#slider_offer_menu #slider_offer_menu-menu_flight{
+
+#slider_offer_menu #slider_offer_menu-menu_flight {
     height: 596px;
     margin-top: 50px;
     border-radius: 10px;
     background: white;
     padding: 30px 50px 13px 25px;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+#slider_offer_menu #slider_offer_menu-menu_flight #slider_o_m-m_f-items {
+    margin-top: 41px;
+    height: 475px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    row-gap: 24px;
+}
+#slider_offer_menu #slider_offer_menu-menu_flight #slider_o_m-m_f-items #slider_o_m-m_f-items-item {
+    min-height: 76px;
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid #b9bac0;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    align-items: baseline;
+    font-weight: 700;
+    color: #282E44;
+    position: relative;
+}
+#slider_offer_menu #slider_offer_menu-menu_flight #slider_o_m-m_f-items #slider_o_m-m_f-items-item #m_f-items-item-img{
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#slider_offer_menu #slider_offer_menu-menu_flight #slider_o_m-m_f-items #slider_o_m-m_f-items-item #m_f-items-item-img img{
+    height:inherit;
+    width: inherit;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#slider_offer_menu #slider_offer_menu-menu_flight #slider_o_m-m_f-items #slider_o_m-m_f-items-item #m_f-items-item-localtion{
+    color: #A2A8BF;
+    margin-left: 20px;
+    width: 288px;
+    margin-right: 65px;
+}
+#slider_offer_menu #slider_offer_menu-menu_flight #slider_o_m-m_f-items #slider_o_m-m_f-items-item #m_f-items-item-localtion span{
+    font-size: 18px;
+    font-weight: 800;
+    color: #282E44;
+}
+#slider_offer_menu #slider_offer_menu-menu_flight #slider_o_m-m_f-items #slider_o_m-m_f-items-item #m_f-items-item-price{
+    width: 114px;
+}
+#slider_offer_menu #slider_offer_menu-menu_flight #slider_o_m-m_f-items #slider_o_m-m_f-items-item .m_f-items-item-button {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    height: 42px;
+    width: 152px;
+    border: none;
+    border-radius: 50px;
+    background: transparent;
+    transition:  box-shadow 0.5s;
+   margin-left: 81px;
+}
+#slider_offer_menu #slider_offer_menu-menu_flight #slider_o_m-m_f-items #slider_o_m-m_f-items-item .m_f-items-item-button.active {
+    box-shadow: 152px 0px #163668 inset;
+    color: white;
+}
+#banner{
+    height: 205px;
+    margin-top: 50px;
+    border-radius: 15px;
+    background-color: black;
+    box-sizing: unset;
+    margin-bottom: 55px;
 }
