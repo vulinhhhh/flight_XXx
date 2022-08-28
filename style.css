@@ -464,8 +464,9 @@ header {
     background: transparent;
     transition:  box-shadow 0.5s;
    margin-left: 81px;
+   cursor: pointer;
 }
-#slider_offer_menu #slider_offer_menu-menu_flight #slider_o_m-m_f-items #slider_o_m-m_f-items-item .m_f-items-item-button.active {
+#slider_offer_menu #slider_offer_menu-menu_flight #slider_o_m-m_f-items #slider_o_m-m_f-items-item .m_f-items-item-button:hover {
     box-shadow: 152px 0px #163668 inset;
     color: white;
 }
