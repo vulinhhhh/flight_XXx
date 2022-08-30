@@ -153,7 +153,7 @@ header {
     display: flex;
 }
 
-#menu-nav #menu-nav-butt {
+#menu-nav .menu-nav-butt {
     width: calc(100% / 4);
     height: 73px;
     color: white;
@@ -166,15 +166,15 @@ header {
     align-items: center;
 }
 
-#menu-nav #menu-nav-butt.active {
+#menu-nav .menu-nav-butt.active {
     background: rgba(137, 140, 161, 0.5);
 }
 
-#menu-nav #menu-nav-butt i {
+#menu-nav .menu-nav-butt i {
     margin-top: 27px;
 }
 
-#menu-nav #menu-nav-butt p {
+#menu-nav .menu-nav-butt p {
     margin-top: 18px;
     font-size: 12px;
     font-weight: 700;
@@ -188,9 +188,23 @@ header {
     background: white;
     box-shadow: 0px 1px 10px 3px #888888;
     border: 1px solid transparent;
-
+    display: none;
 }
-
+#menu-s_hotel {
+    height: 290px;
+    width: calc(100%);
+    margin-top: 20px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0px 1px 10px 3px #888888;
+    border: 1px solid transparent;
+    padding:35px 40px 38px 38px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px 0px;
+    font-weight: bold;
+}
 #menu-s_flight #menu-s_flight-nav {
     height: 37px;
     width: 320px;
@@ -222,11 +236,10 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 15px 0px;
-
     font-weight: bold;
 }
 
-#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt1 {
+#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt1,#menu-s_hotel .menu-s_hotel-butt1 {
     height: 88px;
     width: calc(((100% - 36px) * 0.37) - 2px);
     text-transform: uppercase;
@@ -248,7 +261,7 @@ header {
     border: 1px solid rgb(230, 230, 233);
 }
 
-#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt3 {
+#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt3,#menu-s_hotel .menu-s_hotel-butt3 {
     height: 88px;
     width: calc(((100% - 36px) * 0.26) - 2px);
     text-transform: uppercase;
@@ -259,7 +272,7 @@ header {
     border: 1px solid rgb(230, 230, 233);
 }
 
-#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt4 {
+#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt4,#menu-s_hotel .menu-s_hotel-butt4 {
     height: 88px;
     width: calc(((100% - 54px) * 0.16) - 2px);
     text-transform: uppercase;
@@ -270,7 +283,7 @@ header {
     border: 1px solid rgb(230, 230, 233);
 }
 
-#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt3#sl {
+#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt3#sl,#menu-s_hotel .menu-s_hotel-butt3#sl {
     color: white;
     background-color: rgb(223, 20, 45);
     line-height: 88px;
