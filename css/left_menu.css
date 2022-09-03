@@ -1,7 +1,7 @@
 #m_m_1 {
     width: 240px;
     height: 600px;
-    background-image: url(./img_style/header_menu.png);
+    background-image: url(../img_style/header_menu.png);
     border-radius: 12px;
     position: sticky;
     top: 34px;
@@ -19,7 +19,7 @@
 }
 
 #m_m_1 #m_m_1-logo {
-    background-image: url(./img_style/logo_header_menu.png);
+    background-image: url(../img_style/logo_header_menu.png);
     height: 17px;
     width: 63px;
     cursor: pointer;
