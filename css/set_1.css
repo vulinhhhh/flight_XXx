@@ -34,3 +34,18 @@ header {
     z-index: 1;
     position: relative;
 }
+#m_m_2 {
+    width: calc(100% - 240px - 60px);
+    margin-top: 34px;
+}
+#m_m_1 {
+    width: 240px;
+    height: 600px;
+    background-image: url(../img_style/header_menu.png);
+    border-radius: 12px;
+    position: sticky;
+    top: 34px;
+    margin-top: 34px;
+    user-select: none;
+    z-index: 1;
+}
