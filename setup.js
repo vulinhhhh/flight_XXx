@@ -38,6 +38,16 @@ function menu_button_li_active() {
         })
     }
 }
+function left_menu_width(){
+    let left_menu=document.getElementById("m_m_1");
 
+    let left_menu_button_x=document.getElementById("m_m_1-menu");
+    let left_menu_logo=left_menu.childNodes[1].childNodes[1];
+    left_menu_button_x.onclick=function(e){
+        left_menu.classList.toggle("smail");
+        left_menu_logo.classList.toggle("none");
+    }
+};
 menu_nav_butt_active();
 menu_button_li_active();
+left_menu_width();

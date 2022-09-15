@@ -48,4 +48,8 @@ header {
     margin-top: 34px;
     user-select: none;
     z-index: 1;
+    transition: width 0.5s;
+}
+#m_m_1.smail{
+    width:80px;
 }

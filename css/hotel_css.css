@@ -1,7 +1,8 @@
-.slider_offer_menu #slider_offer_menu-slider-h{
+.slider_offer_menu #slider_offer_menu-slider-h {
     width: 100%;
     height: 291px;
 }
+
 .slider_offer_menu #slider_offer_menu-slider-h #slider .slider_item {
     min-width: 350px;
     height: calc(100% - 2px);
@@ -9,6 +10,105 @@
     display: flex;
     background-color: white;
     box-shadow: 0px 5px 7px -5px rgb(90 88 88);
-    padding: 24px 28px 8px 24px;
+    overflow: hidden;
     justify-content: space-between;
+    position: relative;
+}
+
+.slider_offer_menu #slider_offer_menu-slider-h #slider .slider_item img {
+    width: 100%;
+    height: 100%;
+}
+
+.slider_offer_menu #slider_offer_menu-slider-h #slider .slider_item .slider_item-text-bill {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 12px;
+    color: rgb(236, 231, 231);
+}
+
+.slider_offer_menu #slider_offer_menu-slider-h #slider .slider_item .slider_item-text-bill .bill {
+    font-weight: 800;
+    font-size: 24px;
+    color: white;
+}
+
+.slider_offer_menu #slider_offer_menu-slider-h #slider .slider_item .slider_item-text-avatar {
+    position: absolute;
+    top: 162px;
+    left: 30px;
+    height: 50px;
+    width: 172px;
+    display: flex;
+    gap:0px 14px;
+}
+
+.slider_offer_menu #slider_offer_menu-slider-h #slider .slider_item .slider_item-text-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: black;
+    margin-top: 3px;
+    box-shadow: 0px 1px 10px 1px rgb(114, 112, 112);
+    user-select: none;
+}
+
+.slider_offer_menu #slider_offer_menu-slider-h #slider .slider_item .slider_item-text-avatar .country_style {
+    height: 50px;
+    color: rgb(192, 185, 185);
+}
+
+.slider_offer_menu #slider_offer_menu-slider-h #slider .slider_item .slider_item-text-avatar .country_style .country {
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: white;
+}
+.slider_offer_menu #slider_offer_menu-menu_hotel{
+    margin-top: 53px;
+    height: 423px;
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+    padding: 30px 50px 50px 54px;
+    
+}
+.slider_offer_menu #slider_offer_menu-menu_hotel #slider_o_m-m_h-items{
+    display:flex;
+    gap: 30px 20px;
+    width: 100%;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+.slider_offer_menu #slider_offer_menu-menu_hotel #slider_o_m-m_h-items .slider_o_m-m_h-items-item{
+    height: 74px;
+    width: calc((100% - 40px ) / 3);
+    background: rgb(233, 233, 233);
+    border:1px solid rgb(212, 210, 210);
+    border-radius: 50px;
+    display: flex;
+    padding: 12px 0px 12px 22px;
+    gap: 0px 10px;
+    cursor: pointer;
+}
+.slider_offer_menu #slider_offer_menu-menu_hotel #slider_o_m-m_h-items .slider_o_m-m_h-items-item img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+.slider_offer_menu #slider_offer_menu-menu_hotel #slider_o_m-m_h-items .slider_o_m-m_h-items-item .country_style{
+    height: 30px;
+    color: rgb(128, 127, 127);
+    margin-top: 5px;
+    font-size: 13px;
+}
+.slider_offer_menu #slider_offer_menu-menu_hotel #slider_o_m-m_h-items .slider_o_m-m_h-items-item .country_style .country{
+    font-size: 16px;
+    color: #000;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.slider_offer_menu #banner img{
+    width: 100%;
+    height: 100%;
 }
