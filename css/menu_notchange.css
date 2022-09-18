@@ -47,7 +47,7 @@
     box-shadow: 0px 1px 10px 3px #888888;
     border: 1px solid transparent;
     position: relative;
-    display: none;
+    display: block;
 }
 
 #menu-s_hotel {
@@ -59,12 +59,13 @@
     box-shadow: 0px 1px 10px 3px #888888;
     border: 1px solid transparent;
     padding: 35px 40px 38px 38px;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 18px 26px;
     font-weight: bold;
     position: relative;
+    
 }
 
 #menu-s_flight #menu-s_flight-nav {
@@ -147,12 +148,14 @@
     cursor: pointer;
     border-radius: 10px;
     background-color: rgb(248, 248, 250);
-    border: 1px solid rgb(230, 230, 233);
+    border: 1px solid rgb(175, 175, 175);
+    
+}
+#menu-s_hotel .menu-s_hotel-butt4.hotel{
     position: absolute;
     top: 143px;
     right: 40px;
 }
-
 #menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt4,
 #menu-s_hotel .menu-s_hotel-butt5 {
     height: 88px;

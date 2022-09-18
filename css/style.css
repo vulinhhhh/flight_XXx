@@ -63,11 +63,12 @@
     width: calc(100% - 285px);
     border-radius: 10px;
     overflow: hidden;
+    height: 140px;
 }
 
 .slider_offer_menu #slider_offer_menu-slider #slider .slider_item #slider_item-img img {
     height: 100%;
-    width: 125px;
+    width: 100%;
     object-fit: cover;
 }
 
