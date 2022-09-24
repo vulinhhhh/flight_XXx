@@ -48,6 +48,7 @@
     border: 1px solid transparent;
     position: relative;
     display: block;
+    
 }
 
 #menu-s_hotel {
@@ -72,18 +73,22 @@
     height: 37px;
     width: 320px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap:0px 15px;
     margin-top: 20px;
     margin-left: 35px;
 }
 
 #menu-s_flight #menu-s_flight-nav .menu-s_flight-nav-butt {
     height: 100%;
-    width: 100px;
+    width: 125px;
     border-radius: 50px;
     cursor: pointer;
     line-height: 37px;
     text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #353F65;
 }
 
 #menu-s_flight #menu-s_flight-nav .menu-s_flight-nav-butt.active {
@@ -97,11 +102,15 @@
     margin-left: 35px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 15px 0px;
+    justify-content: flex-start;
+    gap: 15px 21px;
     font-weight: bold;
+    position: relative;
 }
-
+#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt-name,
+#menu-s_hotel .menu-s_hotel-butt-name {
+    margin-bottom: 10px;
+}
 #menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt1,
 #menu-s_hotel .menu-s_hotel-butt1 {
     height: 88px;
@@ -110,17 +119,79 @@
     border-radius: 10px;
     background-color: rgb(248, 248, 250);
     border: 1px solid rgb(175, 175, 175);
+    padding: 14px 55px 0px 18px;
+    font-size: 12px;
+    color: #C2C6D2;
 }
-
-#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt2 {
-    height: 88px;
-    width: calc(((100% - 54px) * 0.29) - 2px);
-    cursor: pointer;
-    border-radius: 10px;
+#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt-location{
+    height: 18px;
+    width: 100%;
+    outline: none;
+    color:#2E3758;
+    font-weight: 700;
+    font-size: 18px;
     background-color: rgb(248, 248, 250);
-    border: 1px solid rgb(175, 175, 175);
+    position: relative;
 }
-
+#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt-location i{
+    position: absolute;
+    top:-1px;
+    right: 0px;
+    border:1px solid black;
+    box-sizing: unset;
+    padding: 1px;
+}
+#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt-location i.rotate{
+    transform: rotate(180deg);
+}
+#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt-location input[type="text"]{
+    width:10px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 30px;
+    box-sizing: unset;
+    font-size: 15px;
+    padding: 0px 5px 0px 5px;
+}
+#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt-location .menu-s_f-m-butt-ticket-p{
+    position: absolute;
+    top: 8px;
+    right: 55px;
+}
+#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt-location .menu-s_f-m-butt-location-menu{
+    margin-top: 10px;
+    height: 0px;
+    width:80%;
+    list-style: none;
+    font-size: 12px;
+    background: white;
+    border: 0px solid;
+   border-radius: 5px;
+   overflow-x: hidden;
+   overflow-y: hidden;
+   transition: height 0.5s,border 0.3s;
+}
+#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt-location .menu-s_f-m-butt-location-menu.show{
+    height: 270px;
+    border: 1px solid;
+}
+#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt-location .menu-s_f-m-butt-location-menu li{
+    height: 30px;
+    width:100%;
+    line-height: 30px;
+    padding-left: 10px;
+    border-top:1px solid;
+}
+#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt-location .menu-s_f-m-butt-location-menu li:hover{
+   background: rgb(170, 165, 165);
+}
+#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt-location .menu-s_f-m-butt-location-menu li#first{
+    border-top:none;
+}
+#menu-s_flight #menu-s_flight-menu input[type="text"]:focus{
+    border-bottom: 1px solid;
+}
 #menu-s_hotel #menu-s_hotel-butt2 {
     height: 88px;
     width: calc(((100% - 54px) * 0.29) - 2px);
@@ -128,6 +199,9 @@
     border-radius: 10px;
     background-color: rgb(248, 248, 250);
     border: 1px solid rgb(175, 175, 175);
+    padding: 14px 95px 0px 18px;
+    font-size: 12px;
+    color: #C2C6D2;
 }
 
 #menu-s_hotel #menu-s_hotel-butt3 {
@@ -137,49 +211,32 @@
     border-radius: 10px;
     background-color: rgb(248, 248, 250);
     border: 1px solid rgb(175, 175, 175);
+    padding: 14px 95px 0px 18px;
+    font-size: 12px;
+    color: #C2C6D2;
 }
 
 #menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt3,
 #menu-s_hotel .menu-s_hotel-butt4 {
     height: 88px;
     width: calc(((100% - 36px) * 0.26) - 2px);
-    text-transform: uppercase;
-    text-align: center;
     cursor: pointer;
     border-radius: 10px;
     background-color: rgb(248, 248, 250);
     border: 1px solid rgb(175, 175, 175);
-    
+    color: #C2C6D2;
+    padding: 14px 95px 0px 18px;
+    font-size: 12px;
+}
+#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt3.flight{
+    position: absolute;
+    top: 104px;
+    right: 0px;
 }
 #menu-s_hotel .menu-s_hotel-butt4.hotel{
     position: absolute;
     top: 143px;
     right: 40px;
-}
-#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt4,
-#menu-s_hotel .menu-s_hotel-butt5 {
-    height: 88px;
-    width: calc(((100% - 54px) * 0.16) - 2px);
-    cursor: pointer;
-    border-radius: 10px;
-    background-color: rgb(248, 248, 250);
-    border: 1px solid rgb(175, 175, 175);
-}
-
-#menu-s_hotel #menu-s_hotel-butt6 {
-    height: 88px;
-    max-width: 50%;
-    border-radius: 10px;
-    line-height: 88px;
-    font-size: 17px;
-    display: flex;
-}
-#menu-s_hotel #menu-s_hotel-butt6 input{ 	
-    height: 24px;
-    width: 24px;
-    margin-top: 30px;
-    margin-right: 10px;
-    cursor: pointer;
 }
 #menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt3#sl,
 #menu-s_hotel .menu-s_hotel-butt4#sl {
@@ -187,4 +244,7 @@
     background-color: rgb(223, 20, 45);
     line-height: 88px;
     font-size: 17px;
+    text-transform: uppercase;
+    text-align: center;
+    padding:0px;
 }
