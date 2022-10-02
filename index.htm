@@ -74,7 +74,7 @@
                     </div>
                 </div>
                 <!-- menu -->
-                <div id="menu-s_flight">
+                <form id="menu-s_flight">
                     <div id="menu-s_flight-nav">
                         <div class="menu-s_flight-nav-butt active">Vé Một Chiều</div>
                         <div class="menu-s_flight-nav-butt">Vé Hai Chiều</div>
@@ -129,7 +129,14 @@
                                 <i class="fa-solid fa-ticket"></i>
                                 SỐ VÉ
                             </div>
-                            
+                            <div class="menu-s_f-m-butt-add">
+                                <p>0 Vé</p>
+                                <div class="menu-s_f-m-butt-add-butt">
+                                    <button type="button"><i class="fa-solid fa-plus"></i></button>
+                                    <button type="button"><i class="fa-solid fa-minus"></i></button>
+                                </div>
+                                
+                            </div>
                             
                         </div>
                         <div class="menu-s_f-m-butt1">
@@ -148,14 +155,28 @@
                         </div>
                         <div id="sl" class="menu-s_f-m-butt3 flight">SEARCH FLIGHTS</div>
                     </div>
-                </div>
-                <div id="menu-s_hotel">
+                </form>
+                <form id="menu-s_hotel">
                     <div class="menu-s_hotel-butt1">
                         <div class="menu-s_hotel-butt-name">
-                            <i class="fa-solid fa-location-dot"></i>
+                            <i class="fa-solid fa-city"></i>
                             TÊN THÀNH PHỐ
                         </div>
-                        <input type="text">
+                        <div id="menu-s_h-butt-city">
+                            <p class="menu-s_h-b-c-p">Chọn thành phố</p>
+                            <i id="menu-s_f-m-b-l-i" class="fa-solid fa-chevron-up"></i>
+                            <!-- <ul class="menu-s_f-m-butt-city-menu">
+                                <li id="first">Nha Trang,Khánh Hòa</li>
+                                <li>Nha Trang,Khánh Hòa</li>
+                                <li>Nha Trang,Khánh Hòa</li>
+                                <li>Nha Trang,Khánh Hòa</li>
+                                <li>Nha Trang,Khánh Hòa</li>
+                                <li>Nha Trang,Khánh Hòa</li>
+                                <li>Nha Trang,Khánh Hòa</li>
+                                <li>Nha Trang,Khánh Hòa</li>
+                                <li>Nha Trang,Khánh Hòa</li>
+                            </ul> -->
+                        </div>
                     </div>
                     <div id="menu-s_hotel-butt2">
                         <div class="menu-s_hotel-butt-name">
@@ -164,24 +185,30 @@
                         </div>
                         <input type="date">
                     </div>
-                    <div id="menu-s_hotel-butt3">
-                        <div class="menu-s_hotel-butt-name">
-                            <i class="fa-solid fa-person"></i>
-                            SỐ NGƯỜI
-                        </div>
-                        <input type="text">
-                    </div>
                     <div id="menu-s_hotel-butt2">
                         <div class="menu-s_hotel-butt-name">
                             <i class="fa-solid fa-calendar-days"></i>
                             NGÀY TRẢ PHÒNG
                         </div>
-                        <input type="date" >
+                        <input type="date">
                     </div>
+                    <div id="menu-s_hotel-butt3">
+                        <div class="menu-s_hotel-butt-name">
+                            <i class="fa-solid fa-person"></i>
+                            SỐ NGƯỜI
+                        </div>
+                        <div class="menu-s_hotel-butt-add">
+                            <p>0 Người</p>
+                            <div class="menu-s_hotel-butt-add-butt">
+                                <button type="button"><i class="fa-solid fa-plus"></i></button>
+                                <button type="button"><i class="fa-solid fa-minus"></i></button>
+                            </div>
+                    </div>
+                   
 
-                    <div id="sl" class="menu-s_hotel-butt4 hotel">search flight</div>
+                    <div id="sl" class="menu-s_hotel-butt4 hotel">search hotel</div>
                 </div>
-            </div>
+            </form>
             <!--slider menu flight-->
             <div class="slider_offer_menu">
                 <div id="slider_offer_menu-slider">
