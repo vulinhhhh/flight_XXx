@@ -128,15 +128,15 @@ function butt_location_active() {
 }
 function date_input_set() {
     const input_date = Array.from(document.querySelectorAll("input[type=date]"));
-    let date=new Date();
+    let date = new Date();
     let today = date.toISOString().slice(0, 10);
-    let setmax=`${date.getFullYear()}-12-31`;
-    let setmin=`${date.getFullYear()}-01-01`;
+    let setmax = `${date.getFullYear()}-12-31`;
+    let setmin = `${date.getFullYear()}-01-01`;
 
-   
+
     input_date.forEach(function (e) {
-        e.setAttribute("max",setmax);
-        e.setAttribute("min",setmin);
+        e.setAttribute("max", setmax);
+        e.setAttribute("min", setmin);
         e.value = today;
         e.onchange = function (event) {
         }
@@ -151,55 +151,53 @@ function date_input_set() {
     })
 
 }
-function ticket_button_click(){
-    const ticket_button=Array.from(document.querySelectorAll(".menu-s_f-m-butt-add-butt>button"));
-    const p_name=document.querySelector(".menu-s_f-m-butt-add>p");
-  console.log(p_name.innerText.split(" "))
-    ticket_button.forEach(function(e,index){
-       if(index==0){
-        e.onclick=function(event){
-            let p_name_0=p_name.innerText.split(" ")[0];
-            p_name_0=parseFloat( p_name_0)+1;
-            p_name.innerHTML=p_name_0+" Vé";
-        }
-       }else{
-        e.onclick=function(event){
-            let p_name_0=p_name.innerText.split(" ")[0];
-            if(parseFloat( p_name_0)>0){
-                p_name_0=parseFloat( p_name_0)-1;
-                p_name.innerHTML=p_name_0+" Vé";
+function ticket_button_click() {
+    const ticket_button = Array.from(document.querySelectorAll(".menu-s_f-m-butt-add-butt>button"));
+    const p_name = document.querySelector(".menu-s_f-m-butt-add>p");
+    console.log(p_name.innerText.split(" "))
+    ticket_button.forEach(function (e, index) {
+        if (index == 0) {
+            e.onclick = function (event) {
+                let p_name_0 = p_name.innerText.split(" ")[0];
+                p_name_0 = parseFloat(p_name_0) + 1;
+                p_name.innerHTML = p_name_0 + " Vé";
+            }
+        } else {
+            e.onclick = function (event) {
+                let p_name_0 = p_name.innerText.split(" ")[0];
+                if (parseFloat(p_name_0) > 0) {
+                    p_name_0 = parseFloat(p_name_0) - 1;
+                    p_name.innerHTML = p_name_0 + " Vé";
+                }
             }
         }
-       }
     })
-    
-}
-function nguoi_button_click(){
-    const nguoi_button=Array.from(document.querySelectorAll(".menu-s_hotel-butt-add-butt>button"));
-    const p_name=document.querySelector(".menu-s_hotel-butt-add>p");
-  console.log(p_name.innerText.split(" "))
-  nguoi_button.forEach(function(e,index){
-       if(index==0){
-        e.onclick=function(event){
-            let p_name_0=p_name.innerText.split(" ")[0];
-            p_name_0=parseFloat( p_name_0)+1;
-            p_name.innerHTML=p_name_0+" Người";
-        }
-       }else{
-        e.onclick=function(event){
-            let p_name_0=p_name.innerText.split(" ")[0];
-            if(parseFloat( p_name_0)>0){
-                p_name_0=parseFloat( p_name_0)-1;
-                p_name.innerHTML=p_name_0+" Người";
-            }
-        }
-       }
-    })
-    
-}
-function city_hotel(){
 
 }
+function nguoi_button_click() {
+    const nguoi_button = Array.from(document.querySelectorAll(".menu-s_hotel-butt-add-butt>button"));
+    const p_name = document.querySelector(".menu-s_hotel-butt-add>p");
+    console.log(p_name.innerText.split(" "))
+    nguoi_button.forEach(function (e, index) {
+        if (index == 0) {
+            e.onclick = function (event) {
+                let p_name_0 = p_name.innerText.split(" ")[0];
+                p_name_0 = parseFloat(p_name_0) + 1;
+                p_name.innerHTML = p_name_0 + " Người";
+            }
+        } else {
+            e.onclick = function (event) {
+                let p_name_0 = p_name.innerText.split(" ")[0];
+                if (parseFloat(p_name_0) > 0) {
+                    p_name_0 = parseFloat(p_name_0) - 1;
+                    p_name.innerHTML = p_name_0 + " Người";
+                }
+            }
+        }
+    })
+
+}
+
 
 menu_nav_butt_active();
 menu_button_li_active();
@@ -210,4 +208,3 @@ date_input_set();
 city_hotel();
 ticket_button_click();
 nguoi_button_click();
-change_active();
