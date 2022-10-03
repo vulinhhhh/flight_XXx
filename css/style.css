@@ -2,6 +2,7 @@
     width: 100%;
     margin-top: 42px;
     display: none;
+    padding-bottom: 20px;
 }
 .slider_offer_menu #slider_offer_menu-slider{
     width: 100%;
@@ -216,6 +217,7 @@
     margin-bottom: 20px;
     overflow: hidden;
     position: relative;
+
 }
 .slider_offer_menu #banner img{
     width: 100%;

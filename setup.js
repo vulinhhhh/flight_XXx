@@ -43,13 +43,32 @@ function menu_s_flight_nav_butt_active() {
 function menu_notchange_active(a) {
     const menu_s_flight = document.getElementById("menu-s_flight");
     const menu_s_hotel = document.getElementById("menu-s_hotel");
+    //flight
+    const menu_s_f_c_1=menu_s_flight.childNodes[3].childNodes[1].childNodes[3];
+    const menu_s_f_c_3=menu_s_flight.childNodes[3].childNodes[3].childNodes[3];
+    const menu_s_f_c_5=menu_s_flight.childNodes[3].childNodes[5].childNodes[3];
+    const menu_s_f_c_7=menu_s_flight.childNodes[3].childNodes[7].childNodes[3];
+    const menu_s_f_c_9=menu_s_flight.childNodes[3].childNodes[9].childNodes[3];
+    //hotel
+    const menu_s_hotel_1=menu_s_hotel.childNodes[1];
+    const menu_s_hotel_3=menu_s_hotel.childNodes[3].childNodes[3];
+    const menu_s_hotel_5=menu_s_hotel.childNodes[5].childNodes[3];
+    const menu_s_hotel_7=menu_s_hotel.childNodes[7].childNodes[3];
     if (a == 1) {
         menu_s_hotel.setAttribute("style", "display:flex;");
         menu_s_flight.setAttribute("style", "display:none;");
+        menu_s_f_c_1.childNodes[1].innerHTML=menu_s_f_c_1.childNodes[5].childNodes[1].innerHTML;
+        menu_s_f_c_3.childNodes[1].innerHTML=menu_s_f_c_3.childNodes[5].childNodes[1].innerHTML;
+        menu_s_f_c_5.childNodes[1].innerHTML="0 Vé";
+        menu_s_f_c_7.value=new Date().toISOString().slice(0, 10);
+        menu_s_f_c_9.value=new Date().toISOString().slice(0, 10);
     }
     else {
         menu_s_hotel.setAttribute("style", "display:none;");
         menu_s_flight.setAttribute("style", "display:block;");
+        menu_s_hotel_3.value=new Date().toISOString().slice(0, 10);
+        menu_s_hotel_5.value=new Date().toISOString().slice(0, 10);
+        menu_s_hotel_7.childNodes[1].innerHTML="0 Người";
     }
 }
 function slider_offer_menu_active(a, b) {
@@ -154,7 +173,6 @@ function date_input_set() {
 function ticket_button_click() {
     const ticket_button = Array.from(document.querySelectorAll(".menu-s_f-m-butt-add-butt>button"));
     const p_name = document.querySelector(".menu-s_f-m-butt-add>p");
-    console.log(p_name.innerText.split(" "))
     ticket_button.forEach(function (e, index) {
         if (index == 0) {
             e.onclick = function (event) {
@@ -177,7 +195,6 @@ function ticket_button_click() {
 function nguoi_button_click() {
     const nguoi_button = Array.from(document.querySelectorAll(".menu-s_hotel-butt-add-butt>button"));
     const p_name = document.querySelector(".menu-s_hotel-butt-add>p");
-    console.log(p_name.innerText.split(" "))
     nguoi_button.forEach(function (e, index) {
         if (index == 0) {
             e.onclick = function (event) {
@@ -198,7 +215,9 @@ function nguoi_button_click() {
 
 }
 
+function city_hotel(){
 
+}
 menu_nav_butt_active();
 menu_button_li_active();
 menu_s_flight_nav_butt_active();
@@ -208,3 +227,4 @@ date_input_set();
 city_hotel();
 ticket_button_click();
 nguoi_button_click();
+
