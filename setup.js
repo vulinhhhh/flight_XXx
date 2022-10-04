@@ -44,31 +44,31 @@ function menu_notchange_active(a) {
     const menu_s_flight = document.getElementById("menu-s_flight");
     const menu_s_hotel = document.getElementById("menu-s_hotel");
     //flight
-    const menu_s_f_c_1=menu_s_flight.childNodes[3].childNodes[1].childNodes[3];
-    const menu_s_f_c_3=menu_s_flight.childNodes[3].childNodes[3].childNodes[3];
-    const menu_s_f_c_5=menu_s_flight.childNodes[3].childNodes[5].childNodes[3];
-    const menu_s_f_c_7=menu_s_flight.childNodes[3].childNodes[7].childNodes[3];
-    const menu_s_f_c_9=menu_s_flight.childNodes[3].childNodes[9].childNodes[3];
+    const menu_s_f_c_1 = menu_s_flight.childNodes[3].childNodes[1].childNodes[3];
+    const menu_s_f_c_3 = menu_s_flight.childNodes[3].childNodes[3].childNodes[3];
+    const menu_s_f_c_5 = menu_s_flight.childNodes[3].childNodes[5].childNodes[3];
+    const menu_s_f_c_7 = menu_s_flight.childNodes[3].childNodes[7].childNodes[3];
+    const menu_s_f_c_9 = menu_s_flight.childNodes[3].childNodes[9].childNodes[3];
     //hotel
-    const menu_s_hotel_1=menu_s_hotel.childNodes[1];
-    const menu_s_hotel_3=menu_s_hotel.childNodes[3].childNodes[3];
-    const menu_s_hotel_5=menu_s_hotel.childNodes[5].childNodes[3];
-    const menu_s_hotel_7=menu_s_hotel.childNodes[7].childNodes[3];
+    const menu_s_hotel_1 = menu_s_hotel.childNodes[1];
+    const menu_s_hotel_3 = menu_s_hotel.childNodes[3].childNodes[3];
+    const menu_s_hotel_5 = menu_s_hotel.childNodes[5].childNodes[3];
+    const menu_s_hotel_7 = menu_s_hotel.childNodes[7].childNodes[3];
     if (a == 1) {
         menu_s_hotel.setAttribute("style", "display:flex;");
         menu_s_flight.setAttribute("style", "display:none;");
-        menu_s_f_c_1.childNodes[1].innerHTML=menu_s_f_c_1.childNodes[5].childNodes[1].innerHTML;
-        menu_s_f_c_3.childNodes[1].innerHTML=menu_s_f_c_3.childNodes[5].childNodes[1].innerHTML;
-        menu_s_f_c_5.childNodes[1].innerHTML="0 Vé";
-        menu_s_f_c_7.value=new Date().toISOString().slice(0, 10);
-        menu_s_f_c_9.value=new Date().toISOString().slice(0, 10);
+        menu_s_f_c_1.childNodes[1].innerHTML = menu_s_f_c_1.childNodes[5].childNodes[1].innerHTML;
+        menu_s_f_c_3.childNodes[1].innerHTML = menu_s_f_c_3.childNodes[5].childNodes[1].innerHTML;
+        menu_s_f_c_5.childNodes[1].innerHTML = "0 Vé";
+        menu_s_f_c_7.value = new Date().toISOString().slice(0, 10);
+        menu_s_f_c_9.value = new Date().toISOString().slice(0, 10);
     }
     else {
         menu_s_hotel.setAttribute("style", "display:none;");
         menu_s_flight.setAttribute("style", "display:block;");
-        menu_s_hotel_3.value=new Date().toISOString().slice(0, 10);
-        menu_s_hotel_5.value=new Date().toISOString().slice(0, 10);
-        menu_s_hotel_7.childNodes[1].innerHTML="0 Người";
+        menu_s_hotel_3.value = new Date().toISOString().slice(0, 10);
+        menu_s_hotel_5.value = new Date().toISOString().slice(0, 10);
+        menu_s_hotel_7.childNodes[1].innerHTML = "0 Người";
     }
 }
 function slider_offer_menu_active(a, b) {
@@ -121,14 +121,14 @@ function butt_location_active() {
             })
         }
     })
-    console.log(butt_location[0].parentElement == document.querySelector(".menu-s_f-m-butt1"))
+
     //butt location click
     butt_location.forEach(function (e, index) {
         e.onclick = function () {
             for (let butt = 0; butt < butt_location.length; butt++) {
                 if (true) {
                     if (butt_location[butt].childNodes[5].classList.contains("show") && butt != index) {
-                        console.log(butt);
+
                         butt_location[butt].childNodes[5].classList.remove("show");
                         butt_location[butt].childNodes[3].classList.remove("rotate");
                     }
@@ -215,8 +215,22 @@ function nguoi_button_click() {
 
 }
 
-function city_hotel(){
+function city_hotel() {
+    const butt_city = document.getElementById("menu-s_h-butt-city");
+    const butt_city_menu = Array.from(document.getElementsByClassName("menu-s_f-m-butt-city-menu"));
+    const butt_city_menu_li = Array.from(document.querySelectorAll(".menu-s_f-m-butt-city-menu li"));
+    console.log(butt_city_menu[0])
+    butt_city.onclick = function (event) {
+        butt_city_menu[0].classList.toggle("show");
+    }
 
+    window.addEventListener("click", function (e) {
+        if (!e.target.matches('#menu-s_h-butt-city') && !e.target.matches('.menu-s_h-b-c-p') && !e.target.matches('#menu-s_h-b-c-i')) {
+            if(butt_city_menu[0].classList.contains("show")){
+                butt_city_menu[0].classList.remove("show")
+            }
+        }
+    })
 }
 menu_nav_butt_active();
 menu_button_li_active();

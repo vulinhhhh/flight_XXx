@@ -16,11 +16,11 @@ body {
     width: 0px;
 }
 
-header {
-    background-image: url(../img_style/header_img.png);
+#header {
     height: 425px;
     position: absolute;
     width: 100%;
+    min-width: 1366px;
 }
 
 #result {
@@ -28,6 +28,7 @@ header {
     margin-left: 40px;
     margin-right: 60px;
     width: calc(100% - 40px - 60px);
+   min-width: 1210px;
     display: flex;
     justify-content: space-between;
     min-height: 100%;

@@ -170,7 +170,8 @@
     right: 55px;
 }
 
-#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt-location .menu-s_f-m-butt-location-menu {
+#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt-location .menu-s_f-m-butt-location-menu,
+#menu-s_hotel .menu-s_hotel-butt1 #menu-s_h-butt-city .menu-s_f-m-butt-city-menu {
     margin-top: 10px;
     height: 0px;
     width: 80%;
@@ -182,26 +183,35 @@
     overflow-x: hidden;
     overflow-y: hidden;
     transition: height 0.5s, border 0.3s;
+    z-index:10000;
+    position: relative;
 }
 
-#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt-location .menu-s_f-m-butt-location-menu.show {
+#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt-location .menu-s_f-m-butt-location-menu.show,
+#menu-s_hotel .menu-s_hotel-butt1 #menu-s_h-butt-city .menu-s_f-m-butt-city-menu.show
+{
     height: 270px;
     border: 1px solid;
 }
 
-#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt-location .menu-s_f-m-butt-location-menu li {
+#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt-location .menu-s_f-m-butt-location-menu li,
+#menu-s_hotel .menu-s_hotel-butt1 #menu-s_h-butt-city .menu-s_f-m-butt-city-menu li {
     height: 30px;
     width: 100%;
     line-height: 30px;
     padding-left: 10px;
     border-top: 1px solid;
+   
 }
 
-#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt-location .menu-s_f-m-butt-location-menu li:hover {
+#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt-location .menu-s_f-m-butt-location-menu li:hover,
+#menu-s_hotel .menu-s_hotel-butt1 #menu-s_h-butt-city .menu-s_f-m-butt-city-menu li:hover {
     background: rgb(170, 165, 165);
 }
 
-#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt-location .menu-s_f-m-butt-location-menu li#first {
+#menu-s_flight #menu-s_flight-menu .menu-s_f-m-butt-location .menu-s_f-m-butt-location-menu li#first,
+#menu-s_hotel .menu-s_hotel-butt1 #menu-s_h-butt-city .menu-s_f-m-butt-city-menu li#first
+{
     border-top: none;
 }
 
