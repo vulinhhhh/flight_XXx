@@ -28,7 +28,7 @@
     color: rgb(147, 140, 140);
     margin-right: 45px;
     font-size: 18px;
-    
+    font-weight: 600;
 }
 .slider_offer_menu #title #title_sub:hover{
     text-decoration: underline;
@@ -231,7 +231,7 @@
     right: 40px;
     top: 70px;
     border:none;
-    background-color: rgb(255,145,137);
+    background:rgba(248, 248, 248,0.2);
     font-size: 16px;
     color:white;
     font-weight: 700;

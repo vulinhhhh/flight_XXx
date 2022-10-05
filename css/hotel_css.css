@@ -26,6 +26,8 @@
     left: 30px;
     font-size: 12px;
     color: rgb(236, 231, 231);
+    box-shadow: -30px -30px 18px 41px rgb(0 0 0 / 44%);
+    background: rgb(12 12 12 / 41%);
 }
 
 .slider_offer_menu #slider_offer_menu-slider-h #slider .slider_item .slider_item-text-bill .bill {
@@ -37,11 +39,12 @@
 .slider_offer_menu #slider_offer_menu-slider-h #slider .slider_item .slider_item-text-avatar {
     position: absolute;
     top: 162px;
-    left: 30px;
-    height: 50px;
-    width: 172px;
+    left: 0px;
+    height: 60px;
+    width: 100%;
     display: flex;
     gap:0px 14px;
+    background: linear-gradient(180deg, rgba(255,0,0,0), rgba(0,0,0,0.6));
 }
 
 .slider_offer_menu #slider_offer_menu-slider-h #slider .slider_item .slider_item-text-avatar img {
@@ -52,11 +55,13 @@
     margin-top: 3px;
     box-shadow: 0px 1px 10px 1px rgb(114, 112, 112);
     user-select: none;
+    margin-left: 30px;
 }
 
 .slider_offer_menu #slider_offer_menu-slider-h #slider .slider_item .slider_item-text-avatar .country_style {
     height: 50px;
     color: rgb(192, 185, 185);
+    font-weight: 600;
 }
 
 .slider_offer_menu #slider_offer_menu-slider-h #slider .slider_item .slider_item-text-avatar .country_style .country {
@@ -104,9 +109,8 @@
 }
 .slider_offer_menu #slider_offer_menu-menu_hotel #slider_o_m-m_h-items .slider_o_m-m_h-items-item .country_style .country{
     font-size: 16px;
-    color: #000;
+   color: #282E44;
     font-weight: 800;
-    text-transform: uppercase;
 }
 .slider_offer_menu #banner img{
     width: 100%;
