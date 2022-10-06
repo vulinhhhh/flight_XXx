@@ -59,7 +59,7 @@ function menu_notchange_active(a) {
         menu_s_flight.setAttribute("style", "display:none;");
         menu_s_f_c_1.childNodes[1].innerHTML = menu_s_f_c_1.childNodes[5].childNodes[1].innerHTML;
         menu_s_f_c_3.childNodes[1].innerHTML = menu_s_f_c_3.childNodes[5].childNodes[1].innerHTML;
-        menu_s_f_c_5.childNodes[1].innerHTML = "0 Vé";
+        menu_s_f_c_5.childNodes[1].innerHTML = "0 ticket";
         menu_s_f_c_7.value = new Date().toISOString().slice(0, 10);
         menu_s_f_c_9.value = new Date().toISOString().slice(0, 10);
     }
@@ -68,7 +68,7 @@ function menu_notchange_active(a) {
         menu_s_flight.setAttribute("style", "display:block;");
         menu_s_hotel_3.value = new Date().toISOString().slice(0, 10);
         menu_s_hotel_5.value = new Date().toISOString().slice(0, 10);
-        menu_s_hotel_7.childNodes[1].innerHTML = "0 Người";
+        menu_s_hotel_7.childNodes[1].innerHTML = "0 Class";
     }
 }
 function slider_offer_menu_active(a, b) {
@@ -178,14 +178,14 @@ function ticket_button_click() {
             e.onclick = function (event) {
                 let p_name_0 = p_name.innerText.split(" ")[0];
                 p_name_0 = parseFloat(p_name_0) + 1;
-                p_name.innerHTML = p_name_0 + " Vé";
+                p_name.innerHTML = p_name_0 + " ticket";
             }
         } else {
             e.onclick = function (event) {
                 let p_name_0 = p_name.innerText.split(" ")[0];
                 if (parseFloat(p_name_0) > 0) {
                     p_name_0 = parseFloat(p_name_0) - 1;
-                    p_name.innerHTML = p_name_0 + " Vé";
+                    p_name.innerHTML = p_name_0 + " ticket";
                 }
             }
         }
@@ -200,14 +200,14 @@ function nguoi_button_click() {
             e.onclick = function (event) {
                 let p_name_0 = p_name.innerText.split(" ")[0];
                 p_name_0 = parseFloat(p_name_0) + 1;
-                p_name.innerHTML = p_name_0 + " Người";
+                p_name.innerHTML = p_name_0 + " Class";
             }
         } else {
             e.onclick = function (event) {
                 let p_name_0 = p_name.innerText.split(" ")[0];
                 if (parseFloat(p_name_0) > 0) {
                     p_name_0 = parseFloat(p_name_0) - 1;
-                    p_name.innerHTML = p_name_0 + " Người";
+                    p_name.innerHTML = p_name_0 + " Class";
                 }
             }
         }
@@ -232,6 +232,45 @@ function city_hotel() {
         }
     })
 }
+function get_access(){
+    const gethome__access=document.querySelector("#gethome_access");
+    const gethome_access_shadow=document.querySelector("#gethome_access_shadow");
+    const gethome_access_butt=Array.from(document.querySelectorAll(".sign-in-sign-up-butt"));
+    const gethome_access_signin=document.querySelector("#sign-in");
+    const gethome_access_signup=document.querySelector("#sign-up");
+    const sign_in_sign_up_return=Array.from(document.querySelectorAll(".sign-in-sign-up-return"));
+    
+    gethome_access_butt[0].classList.toggle("show");
+    console.log(gethome_access_butt)
+    gethome__access.onclick=function(){
+        gethome_access_shadow.classList.toggle("show");
+    }
+    gethome_access_butt.forEach(function(e,index){
+        e.onclick=function(event){
+            if(index==0){
+                if(!e.classList.contains("show")){
+                    e.classList.toggle("show");
+                    gethome_access_butt[1].classList.toggle("show");
+                    gethome_access_signin.style.display="block";
+                    gethome_access_signup.style.display="none";
+                }
+            }else{
+                if(!e.classList.contains("show")){
+                    e.classList.toggle("show");
+                    gethome_access_butt[0].classList.toggle("show");
+                    gethome_access_signin.style.display="none";
+                    gethome_access_signup.style.display="block";
+                }
+            }
+        }
+    })
+    sign_in_sign_up_return.forEach(function(e,index){
+        e.onclick=function(event){
+            if(gethome_access_shadow.classList.contains("show")){
+                gethome_access_shadow.classList.remove("show")
+            }
+            }})
+}
 menu_nav_butt_active();
 menu_button_li_active();
 menu_s_flight_nav_butt_active();
@@ -241,4 +280,4 @@ date_input_set();
 city_hotel();
 ticket_button_click();
 nguoi_button_click();
-
+get_access();

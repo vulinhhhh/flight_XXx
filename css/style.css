@@ -199,7 +199,7 @@
     border-radius: 50px;
     background: transparent;
     transition: box-shadow 0.5s;
-    margin-left: 81px;
+    margin-left: 78px;
     cursor: pointer;
 }
 
@@ -224,6 +224,7 @@
     height: 100%;
 }
 .slider_offer_menu #banner button{
+    cursor: pointer;
     height: 54px;
     width: 138px;
     border-radius: 10px;
@@ -231,8 +232,11 @@
     right: 40px;
     top: 70px;
     border:none;
-    background:rgba(248, 248, 248,0.2);
+    background:rgba(179, 165, 165, 0.5);
     font-size: 16px;
-    color:white;
+    color:rgb(245, 237, 237);
     font-weight: 700;
+}
+.slider_offer_menu #banner button:hover{
+    background:rgb(97, 93, 93);
 }
